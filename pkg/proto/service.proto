@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/stonecryptosoft/stonechain/proto";
+
+message HelloReq{
+    string msg = 1;
+    string ip = 2;
+}
+
+message HelloRes{
+    string msg_res = 1;
+}
+
+message UpdatePeersListReq{
+    string ip = 2;
+}
+
+message UpdatePeersListRes{
+    string msg_res = 1;
+}
+
+service AddService{
+    rpc Hello(HelloReq) returns (HelloRes);
+    rpc UpdatePeersList(UpdatePeersListReq) returns (UpdatePeersListRes);
+}
