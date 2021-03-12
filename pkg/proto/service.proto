@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-option go_package = "github.com/stonecryptosoft/stonechain/proto";
+option go_package = "github.com/josercp/stone/proto";
 
 message HelloReq{
     string msg = 1;
